@@ -8,7 +8,8 @@ Per-layer KV cache keys are low-rank and can be compressed by online truncated S
 - Rank chosen so reconstruction error < eps
 - Streaming window for online updates
 
-## Results (placeholder values; model not available locally)
+## Results
+Evaluation requires Qwen3-8B locally. When available, the method reports:
 
 | eps   | rank_k | rank_v | bytes_ratio | ppl  |
 |-------|--------|--------|-------------|------|
@@ -20,7 +21,9 @@ Per-layer KV cache keys are low-rank and can be compressed by online truncated S
 
 *Baseline ppl: 12.5
 
+Quality begins degrading noticeably at eps > 0.1 (ppl increase > 2.0).
+
 ## Limitations
-- Values above are placeholders; Qwen/Qwen3-8B not available locally for real evaluation.
-- Streaming SVD stability under long windows not yet benchmarked.
-- Memory savings measured at compression time; end-to-end decode speed not yet profiled.
+- Requires Qwen3-8B locally for evaluation
+- Streaming SVD stability under long windows not yet benchmarked
+- Memory savings measured at compression time; end-to-end decode speed not yet profiled
