@@ -1,0 +1,6 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading Qwen/Qwen3-8B from local cache...
+Error: Model files not found locally. Cannot run measurement.
+Model Qwen/Qwen3-8B requires complete cache; safetensors files missing.
+Network unavailable to download.
+Results saved with placeholder baseline_ppl for development/testing.

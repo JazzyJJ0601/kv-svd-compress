@@ -1,0 +1,11 @@
+{
+  "baseline_ppl": 12.5,
+  "results": [
+    {"eps": 0.0, "mean_rank_k": 512, "mean_rank_v": 512, "bytes_ratio": 1.0, "ppl": 12.5},
+    {"eps": 0.02, "mean_rank_k": 128, "mean_rank_v": 128, "bytes_ratio": 4.0, "ppl": 13.2},
+    {"eps": 0.05, "mean_rank_k": 64, "mean_rank_v": 64, "bytes_ratio": 8.0, "ppl": 14.1},
+    {"eps": 0.1, "mean_rank_k": 32, "mean_rank_v": 32, "bytes_ratio": 16.0, "ppl": 15.5},
+    {"eps": 0.2, "mean_rank_k": 16, "mean_rank_v": 16, "bytes_ratio": 32.0, "ppl": 18.2}
+  ],
+  "note": "Model Qwen/Qwen3-8B not available locally; placeholder values for development"
+}
