@@ -1,6 +1,33 @@
-[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
-Loading Qwen/Qwen3-8B from local cache...
-Error: Model files not found locally. Cannot run measurement.
-Model Qwen/Qwen3-8B requires complete cache; safetensors files missing.
-Network unavailable to download.
-Results saved with placeholder baseline_ppl for development/testing.
+/home/jasper/mint-home/projects/github-portfolio/work/venv/lib/python3.11/site-packages/torch/cuda/__init__.py:1174: UserWarning: Can't initialize NVML
+  raw_cnt = _raw_device_count_nvml()
+Loading Qwen3-8B from /home/jasper/eirene-projects/03-inference-lab/ai-lab/models/Qwen--Qwen3-8B...
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 20548.95it/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (298938 > 131072). Running this sequence through the model will result in indexing errors
+Loaded 32 chunks of 512 tokens each
+chunk 1/32 done
+chunk 2/32 done
+chunk 3/32 done
+chunk 4/32 done
+chunk 5/32 done
+chunk 6/32 done
+chunk 7/32 done
+chunk 8/32 done
+chunk 9/32 done
+chunk 10/32 done
+chunk 11/32 done
+chunk 12/32 done
+chunk 13/32 done
+chunk 14/32 done
+chunk 15/32 done
+chunk 16/32 done
+chunk 17/32 done
+chunk 18/32 done
+chunk 19/32 done
+chunk 20/32 done
+chunk 21/32 done
+chunk 22/32 done
+chunk 23/32 done
+chunk 24/32 done
+chunk 25/32 done
+chunk 26/32 done
+chunk 27/32 done
