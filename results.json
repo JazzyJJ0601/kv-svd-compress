@@ -1,14 +1,97 @@
 {
-  "baseline_ppl": 12.194576242963674,
-  "results": {
-    "0.0": 12.194576242963674,
-    "0.02": 12.178755755062072,
-    "0.05": 12.1966380964989,
-    "0.1": 12.673447011996327,
-    "0.2": 18.987008330997607,
-    "0.3": 46.7441033064298
-  },
-  "n_chunks": 27,
-  "run_status": "partial: killed after 27 of 32 chunks",
-  "model": "Qwen3-8B"
+  "model": "Qwen3-8B",
+  "dataset": "wikitext-2-raw-v1 test",
+  "seq_len": 512,
+  "n_chunks": 32,
+  "baseline_ppl": 11.707,
+  "results": [
+    {
+      "method": "svd",
+      "eps": 0.0,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 1.0,
+      "ppl": 11.707
+    },
+    {
+      "method": "svd",
+      "eps": 0.02,
+      "mean_rank_k": 126.48,
+      "mean_rank_v": 128.0,
+      "bytes_ratio": 1.002,
+      "ppl": 11.7
+    },
+    {
+      "method": "svd",
+      "eps": 0.05,
+      "mean_rank_k": 123.73,
+      "mean_rank_v": 128.0,
+      "bytes_ratio": 1.012,
+      "ppl": 11.716
+    },
+    {
+      "method": "svd",
+      "eps": 0.1,
+      "mean_rank_k": 87.83,
+      "mean_rank_v": 127.82,
+      "bytes_ratio": 1.061,
+      "ppl": 12.173
+    },
+    {
+      "method": "svd",
+      "eps": 0.15,
+      "mean_rank_k": 59.63,
+      "mean_rank_v": 120.55,
+      "bytes_ratio": 1.187,
+      "ppl": 13.964
+    },
+    {
+      "method": "svd",
+      "eps": 0.2,
+      "mean_rank_k": 45.62,
+      "mean_rank_v": 86.02,
+      "bytes_ratio": 1.369,
+      "ppl": 18.104
+    },
+    {
+      "method": "svd",
+      "eps": 0.3,
+      "mean_rank_k": 26.19,
+      "mean_rank_v": 59.0,
+      "bytes_ratio": 2.006,
+      "ppl": 43.261
+    },
+    {
+      "method": "int-quant",
+      "bits": 8,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 1.969,
+      "ppl": 11.707
+    },
+    {
+      "method": "int-quant",
+      "bits": 4,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 3.879,
+      "ppl": 11.983
+    },
+    {
+      "method": "int-quant",
+      "bits": 3,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 5.12,
+      "ppl": 12.723
+    },
+    {
+      "method": "int-quant",
+      "bits": 2,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 7.529,
+      "ppl": 24.608
+    }
+  ]
 }

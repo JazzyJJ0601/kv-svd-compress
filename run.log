@@ -1,7 +1,9 @@
+Loading /home/jasper/eirene-projects/03-inference-lab/ai-lab/models/Qwen--Qwen3-8B...
 /home/jasper/mint-home/projects/github-portfolio/work/venv/lib/python3.11/site-packages/torch/cuda/__init__.py:1174: UserWarning: Can't initialize NVML
   raw_cnt = _raw_device_count_nvml()
-Loading Qwen3-8B from /home/jasper/eirene-projects/03-inference-lab/ai-lab/models/Qwen--Qwen3-8B...
-Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 20548.95it/s]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights: 100%|██████████| 399/399 [00:00<00:00, 19017.36it/s]
+Using the latest cached version of the dataset since Salesforce/wikitext couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'wikitext-2-raw-v1' at /home/jasper/.cache/huggingface/datasets/Salesforce___wikitext/wikitext-2-raw-v1/0.0.0/b08601e04326c79dfdd32d625aee71d232d685c3 (last modified on Wed Sep 30 23:14:47 2026).
 [transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (298938 > 131072). Running this sequence through the model will result in indexing errors
 Loaded 32 chunks of 512 tokens each
 chunk 1/32 done
@@ -31,3 +33,105 @@ chunk 24/32 done
 chunk 25/32 done
 chunk 26/32 done
 chunk 27/32 done
+chunk 28/32 done
+chunk 29/32 done
+chunk 30/32 done
+chunk 31/32 done
+chunk 32/32 done
+{
+  "model": "Qwen3-8B",
+  "dataset": "wikitext-2-raw-v1 test",
+  "seq_len": 512,
+  "n_chunks": 32,
+  "baseline_ppl": 11.707,
+  "results": [
+    {
+      "method": "svd",
+      "eps": 0.0,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 1.0,
+      "ppl": 11.707
+    },
+    {
+      "method": "svd",
+      "eps": 0.02,
+      "mean_rank_k": 126.48,
+      "mean_rank_v": 128.0,
+      "bytes_ratio": 1.002,
+      "ppl": 11.7
+    },
+    {
+      "method": "svd",
+      "eps": 0.05,
+      "mean_rank_k": 123.73,
+      "mean_rank_v": 128.0,
+      "bytes_ratio": 1.012,
+      "ppl": 11.716
+    },
+    {
+      "method": "svd",
+      "eps": 0.1,
+      "mean_rank_k": 87.83,
+      "mean_rank_v": 127.82,
+      "bytes_ratio": 1.061,
+      "ppl": 12.173
+    },
+    {
+      "method": "svd",
+      "eps": 0.15,
+      "mean_rank_k": 59.63,
+      "mean_rank_v": 120.55,
+      "bytes_ratio": 1.187,
+      "ppl": 13.964
+    },
+    {
+      "method": "svd",
+      "eps": 0.2,
+      "mean_rank_k": 45.62,
+      "mean_rank_v": 86.02,
+      "bytes_ratio": 1.369,
+      "ppl": 18.104
+    },
+    {
+      "method": "svd",
+      "eps": 0.3,
+      "mean_rank_k": 26.19,
+      "mean_rank_v": 59.0,
+      "bytes_ratio": 2.006,
+      "ppl": 43.261
+    },
+    {
+      "method": "int-quant",
+      "bits": 8,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 1.969,
+      "ppl": 11.707
+    },
+    {
+      "method": "int-quant",
+      "bits": 4,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 3.879,
+      "ppl": 11.983
+    },
+    {
+      "method": "int-quant",
+      "bits": 3,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 5.12,
+      "ppl": 12.723
+    },
+    {
+      "method": "int-quant",
+      "bits": 2,
+      "mean_rank_k": null,
+      "mean_rank_v": null,
+      "bytes_ratio": 7.529,
+      "ppl": 24.608
+    }
+  ]
+}
